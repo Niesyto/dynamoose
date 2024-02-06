@@ -24,7 +24,7 @@ type UpdatePartial<T> =
   | Partial<T>
   | { $SET: Partial<T> }
   | { $ADD: Partial<T> }
-  | { $REMOVE: Partial<T> }
+  | { $REMOVE: Partial<T> | [keyof T] }
   | { $DELETE: Partial<T> };
 
 // Transactions
